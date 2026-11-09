@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+:root { color-scheme: dark; }
+.stApp { background: radial-gradient(ellipse at 18% 0%, #152454 0%, #0B0F19 42%, #080B12 100%); color: #F4F7FF; font-family: Inter, sans-serif; }
+[data-testid="stHeader"] { background: transparent; }
+[data-testid="stSidebar"] { background: rgba(10,15,28,.92); border-right: 1px solid rgba(255,255,255,.08); }
+h1,h2,h3 { letter-spacing: -.035em; }
+.hero { padding: 18px 22px; margin: 0 0 18px; border: 1px solid rgba(99,154,255,.22); border-radius: 22px; background: linear-gradient(120deg,rgba(20,40,160,.35),rgba(0,169,224,.08)); box-shadow: 0 16px 50px rgba(0,0,0,.2); }
+.glass-card { background: rgba(21,29,48,.68); border: 1px solid rgba(174,200,255,.12); border-radius: 18px; padding: 16px; margin: 8px 0; box-shadow: 0 12px 28px rgba(0,0,0,.16); backdrop-filter: blur(16px); }
+.device-card { background: linear-gradient(145deg,rgba(24,36,61,.85),rgba(15,22,37,.9)); border: 1px solid rgba(138,174,255,.15); border-radius: 16px; padding: 13px 14px; margin-bottom: 9px; }
+.device-title { font-size: 14px; font-weight: 700; margin-bottom: 5px; }
+.muted { color: #9EABC6; font-size: 12px; }
+.watt { color: #00A9E0; font-weight: 800; font-size: 18px; }
+.eco { display: inline-block; color: #00E676; background: rgba(0,230,118,.1); border: 1px solid rgba(0,230,118,.22); border-radius: 999px; padding: 3px 9px; font-size: 10px; font-weight: 800; }
+.tier2 { background: rgba(255,82,82,.10); border: 1px solid rgba(255,82,82,.42); border-radius: 16px; padding: 14px; color: #FFDADA; }
+.metric-card { background: rgba(20,30,52,.68); border: 1px solid rgba(255,255,255,.08); border-radius: 15px; padding: 14px; }
+.stButton>button { border-radius: 12px; border: 1px solid rgba(0,169,224,.35); background: linear-gradient(110deg,#1428A0,#087FAF); color: white; font-weight: 650; }
+.stButton>button:hover { border-color: #00A9E0; color: white; box-shadow: 0 0 18px rgba(0,169,224,.2); }
+[data-testid="stSlider"] [role="slider"] { background: #00A9E0; }
+div[data-testid="stExpander"] { border: 1px solid rgba(174,200,255,.12); border-radius: 13px; background: rgba(21,29,48,.5); }
+.stAlert { border-radius: 13px; }
