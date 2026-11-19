@@ -24,9 +24,6 @@ dist/
 !.env.example
 .streamlit/secrets.toml
 
-# Local Docker Compose configuration
-compose*.yaml
-
 # Logs and OS metadata
 *.log
 .DS_Store

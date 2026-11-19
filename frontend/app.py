@@ -1,5 +1,6 @@
 from pathlib import Path
 import sys
+import os
 import requests
 import pandas as pd
 import plotly.graph_objects as go
@@ -13,7 +14,7 @@ from backend.state_manager import execute_rule, get_device_states
 st.set_page_config(page_title='Smart_Things_Assistant', page_icon='⚡', layout='wide', initial_sidebar_state='collapsed')
 css_path = Path(__file__).with_name('style.css')
 st.markdown(f"<style>{css_path.read_text(encoding='utf-8')}</style>", unsafe_allow_html=True)
-API_BASE = st.sidebar.text_input('FastAPI endpoint', 'http://127.0.0.1:8000').rstrip('/')
+API_BASE = st.sidebar.text_input('FastAPI endpoint', os.getenv('SMART_THINGS_API_URL', 'http://127.0.0.1:8000')).rstrip('/')
 
 def api_get_or_local(path: str, fallback):
     try:

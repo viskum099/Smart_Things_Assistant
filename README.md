@@ -29,6 +29,25 @@ Open two PowerShell windows in the project directory and run:
 
 The API is at `http://127.0.0.1:8000` (`/docs` for the interactive schema). Streamlit falls back to direct local backend imports when the API is unavailable. Set `$env:GEMINI_API_KEY` to enable Gemini 2.5 Flash; the deterministic CSV-aware compiler works offline.
 
+## Run with Docker
+
+Install and start Docker Desktop, then run this from the project directory:
+
+```powershell
+docker compose up --build
+```
+
+Open Streamlit at `http://localhost:8501` and the API documentation at `http://localhost:8000/docs`. Compose runs FastAPI and Streamlit as separate containers and connects the dashboard to the API over the internal `api` service name. The image includes the provided SIC CSV and validates its columns during build.
+
+To enable Gemini in PowerShell, set the key before starting Compose:
+
+```powershell
+$env:GEMINI_API_KEY = "your-key"
+docker compose up --build
+```
+
+Stop the stack with `Ctrl+C`, then run `docker compose down` to remove its containers.
+
 ## API endpoints
 
 - `GET /telemetry`: dataset summary, recent hourly energy/category series, anomalies, tariff/weather recommendations, and virtual device states.
